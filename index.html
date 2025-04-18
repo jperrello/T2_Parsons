@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Journey: Mission to the Moon</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Code Journey: Mission to the Moon 🚀</h1>
+        <div class="stats-container">
+            <div class="timer">
+                <span id="time-label">Time Left:</span>
+                <span id="timer">5:00</span>
+            </div>
+            <div class="fuel-container">
+                <span>Fuel:</span>
+                <div id="fuel-gauge">
+                    <div class="fuel-canister">⛽</div>
+                    <div class="fuel-canister">⛽</div>
+                    <div class="fuel-canister">⛽</div>
+                </div>
+            </div>
+            <div class="score">
+                <span>Mission Progress:</span>
+                <span id="problems-solved">0</span>/3
+            </div>
+        </div>
+        
+        <div id="journey-path">
+            <div id="rocket">🚀</div>
+            <div class="checkpoint" id="checkpoint-1">🛰️</div>
+            <div class="checkpoint" id="checkpoint-2">🛸</div>
+            <div class="destination">🌕</div>
+        </div>
+        
+        <div class="problem-container" id="problem-1">
+            <p class="instructions">Mission Task 1: Arrange the code blocks to create a valid C# program that prints "Hello, Space!" to the console.</p>
+            
+            <div class="problem-area">
+                <div class="source-container">
+                    <h2>Available Code Blocks</h2>
+                    <ul id="source-blocks-1" class="blocks-list">
+                        <li class="code-block" draggable="true">Console.WriteLine("Hello, Space!");</li>
+                        <li class="code-block" draggable="true">using System;</li>
+                        <li class="code-block" draggable="true">class Program {</li>
+                        <li class="code-block" draggable="true">static void Main(string[] args) {</li>
+                        <li class="code-block" draggable="true">}</li>
+                        <li class="code-block" draggable="true">}</li>
+                        <li class="code-block" draggable="true" data-dummy="true">Console.ReadLine();</li>
+                        <li class="code-block" draggable="true" data-dummy="true">namespace SpaceProgram {</li>
+                    </ul>
+                </div>
+                
+                <div class="solution-container">
+                    <h2>Your Solution</h2>
+                    <ul id="solution-blocks-1" class="blocks-list"></ul>
+                </div>
+                
+                <div class="dummy-container">
+                    <h2>Not Needed</h2>
+                    <ul id="dummy-blocks-1" class="blocks-list dummy-list"></ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="problem-container hidden" id="problem-2">
+            <p class="instructions">Mission Task 2: Arrange the code blocks to create a valid C# program that calculates the distance to the moon (238,855 miles) in kilometers.</p>
+            
+            <div class="problem-area">
+                <div class="source-container">
+                    <h2>Available Code Blocks</h2>
+                    <ul id="source-blocks-2" class="blocks-list">
+                        <li class="code-block" draggable="true">const double milesToKm = 1.60934;</li>
+                        <li class="code-block" draggable="true">using System;</li>
+                        <li class="code-block" draggable="true">class Program {</li>
+                        <li class="code-block" draggable="true">static void Main(string[] args) {</li>
+                        <li class="code-block" draggable="true">double moonDistanceMiles = 238855;</li>
+                        <li class="code-block" draggable="true">double moonDistanceKm = moonDistanceMiles * milesToKm;</li>
+                        <li class="code-block" draggable="true">Console.WriteLine($"Distance to the moon: {moonDistanceKm} km");</li>
+                        <li class="code-block" draggable="true">}</li>
+                        <li class="code-block" draggable="true">}</li>
+                        <li class="code-block" draggable="true" data-dummy="true">double earthRadius = 6371;</li>
+                        <li class="code-block" draggable="true" data-dummy="true">int astronautCount = 3;</li>
+                    </ul>
+                </div>
+                
+                <div class="solution-container">
+                    <h2>Your Solution</h2>
+                    <ul id="solution-blocks-2" class="blocks-list"></ul>
+                </div>
+                
+                <div class="dummy-container">
+                    <h2>Not Needed</h2>
+                    <ul id="dummy-blocks-2" class="blocks-list dummy-list"></ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="problem-container hidden" id="problem-3">
+            <p class="instructions">Mission Task 3: Arrange the code blocks to create a valid C# program that calculates how many days it would take to reach the moon at 1,000 km/h.</p>
+            
+            <div class="problem-area">
+                <div class="source-container">
+                    <h2>Available Code Blocks</h2>
+                    <ul id="source-blocks-3" class="blocks-list">
+                        <li class="code-block" draggable="true">using System;</li>
+                        <li class="code-block" draggable="true">class Program {</li>
+                        <li class="code-block" draggable="true">static void Main(string[] args) {</li>
+                        <li class="code-block" draggable="true">double moonDistanceKm = 384400;</li>
+                        <li class="code-block" draggable="true">double speedKmh = 1000;</li>
+                        <li class="code-block" draggable="true">double hoursToMoon = moonDistanceKm / speedKmh;</li>
+                        <li class="code-block" draggable="true">double daysToMoon = hoursToMoon / 24;</li>
+                        <li class="code-block" draggable="true">Console.WriteLine($"Days to reach the moon: {daysToMoon:F2}");</li>
+                        <li class="code-block" draggable="true">}</li>
+                        <li class="code-block" draggable="true">}</li>
+                        <li class="code-block" draggable="true" data-dummy="true">double fuelRequired = moonDistanceKm * 0.5;</li>
+                        <li class="code-block" draggable="true" data-dummy="true">if (daysToMoon > 10) Console.WriteLine("Pack more food!");</li>
+                        <li class="code-block" draggable="true" data-dummy="true">for (int i = 0; i < 3; i++) Console.WriteLine("Countdown!");</li>
+                    </ul>
+                </div>
+                
+                <div class="solution-container">
+                    <h2>Your Solution</h2>
+                    <ul id="solution-blocks-3" class="blocks-list"></ul>
+                </div>
+                
+                <div class="dummy-container">
+                    <h2>Not Needed</h2>
+                    <ul id="dummy-blocks-3" class="blocks-list dummy-list"></ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="buttons">
+            <button id="check-button">Test My Solution</button>
+            <button id="reset-button">Reset Current Task</button>
+        </div>
+        
+        <div id="feedback" class="feedback"></div>
+        
+        <div id="game-over" class="modal hidden">
+            <div class="modal-content">
+                <h2>Mission Failed</h2>
+                <p class="game-over-message">You've run out of fuel!</p>
+                <p>You completed <span id="final-score">0</span> out of 3 mission tasks.</p>
+                <p>Don't worry! Every astronaut needs multiple training sessions.</p>
+                <button id="restart-button">Try Again</button>
+            </div>
+        </div>
+        
+        <div id="victory" class="modal hidden">
+            <div class="modal-content">
+                <h2>Mission Complete! 🎉</h2>
+                <p>Congratulations! You've successfully reached the moon!</p>
+                <p>Time remaining: <span id="victory-time">0</span></p>
+                <p>Fuel remaining: <span id="victory-fuel">0</span> canisters</p>
+                <button id="victory-restart-button">New Mission</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
