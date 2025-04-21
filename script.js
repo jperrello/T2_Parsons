@@ -531,7 +531,41 @@ document.addEventListener('DOMContentLoaded', function() {
         victoryModal.classList.add('hidden');
         initGame();
     });
-    
+    // Certificate download functionality
+    const downloadCertificateButton = document.getElementById('download-certificate');
+    downloadCertificateButton.addEventListener('click', generateCertificate);
+
+    function generateCertificate() {
+        // Ask for student name
+        const studentName = prompt("Enter your name as it should appear on the certificate:", "");
+        if (!studentName || studentName.trim() === "") return;
+        
+        // Set certificate details
+        document.getElementById('certificate-name').textContent = studentName;
+        
+        // Set current date
+        const today = new Date();
+        const dateString = today.toLocaleDateString('en-US', { 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric' 
+        });
+        document.getElementById('certificate-date').textContent = dateString;
+        
+        // Clone the certificate template
+        const certificateTemplate = document.getElementById('certificate-template');
+        const certificateClone = certificateTemplate.cloneNode(true);
+        certificateClone.classList.remove('hidden');
+        
+        // Use html2canvas to convert the certificate to an image
+        html2canvas(certificateClone.querySelector('.certificate')).then(canvas => {
+            // Create a temporary link to download the image
+            const link = document.createElement('a');
+            link.download = `CodeToTheMoon_Certificate_${studentName.replace(/\s+/g, '_')}.png`;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        });
+    }
     // Initialize the game on page load
     initGame();
 });
