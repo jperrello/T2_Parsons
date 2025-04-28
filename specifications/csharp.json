@@ -1,0 +1,83 @@
+{
+  "title": "Code to the Moon 🚀",
+  "problems": [
+    {
+      "instructions": "Mission Task 1: Arrange the code blocks to create a valid C# program that prints 'Hello, Space!' to the console.",
+      "blocks": [
+        "using System;",
+        "class Program {",
+        "static void Main(string[] args) {",
+        "Console.WriteLine(\"Hello, Space!\");",
+        "}",
+        "}",
+        "Console.ReadLine();",
+        "namespace SpaceProgram {"
+      ],
+      "solution": [
+        "using System;",
+        "class Program {",
+        "static void Main(string[] args) {",
+        "Console.WriteLine(\"Hello, Space!\");",
+        "}",
+        "}"
+      ]
+    },
+    {
+      "instructions": "Mission Task 2: Arrange the code blocks to create a valid C# program that calculates the distance to the moon (238,855 miles) in kilometers.",
+      "blocks": [
+        "using System;",
+        "class Program {",
+        "static void Main(string[] args) {",
+        "const double milesToKm = 1.60934;",
+        "double moonDistanceMiles = 238855;",
+        "double moonDistanceKm = moonDistanceMiles * milesToKm;",
+        "Console.WriteLine($\"Distance to the moon: {moonDistanceKm} km\");",
+        "}",
+        "}",
+        "double earthRadius = 6371;",
+        "int astronautCount = 3;"
+      ],
+      "solution": [
+        "using System;",
+        "class Program {",
+        "static void Main(string[] args) {",
+        "const double milesToKm = 1.60934;",
+        "double moonDistanceMiles = 238855;",
+        "double moonDistanceKm = moonDistanceMiles * milesToKm;",
+        "Console.WriteLine($\"Distance to the moon: {moonDistanceKm} km\");",
+        "}",
+        "}"
+      ]
+    },
+    {
+      "instructions": "Mission Task 3: Arrange the code blocks to create a valid C# program that calculates how many days it would take to reach the moon at 1,000 km/h.",
+      "blocks": [
+        "using System;",
+        "class Program {",
+        "static void Main(string[] args) {",
+        "double moonDistanceKm = 384400;",
+        "double speedKmh = 1000;",
+        "double hoursToMoon = moonDistanceKm / speedKmh;",
+        "double daysToMoon = hoursToMoon / 24;",
+        "Console.WriteLine($\"Days to reach the moon: {daysToMoon:F2}\");",
+        "}",
+        "}",
+        "double fuelRequired = moonDistanceKm * 0.5;",
+        "if (daysToMoon > 10) Console.WriteLine(\"Pack more food!\");",
+        "for (int i = 0; i < 3; i++) Console.WriteLine(\"Countdown!\");"
+      ],
+      "solution": [
+        "using System;",
+        "class Program {",
+        "static void Main(string[] args) {",
+        "double moonDistanceKm = 384400;",
+        "double speedKmh = 1000;",
+        "double hoursToMoon = moonDistanceKm / speedKmh;",
+        "double daysToMoon = hoursToMoon / 24;",
+        "Console.WriteLine($\"Days to reach the moon: {daysToMoon:F2}\");",
+        "}",
+        "}"
+      ]
+    }
+  ]
+}
