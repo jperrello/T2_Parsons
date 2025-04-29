@@ -1,0 +1,66 @@
+{
+    "title": "Time Travelers 🚀: History Edition",
+    "problems": [
+      {
+        "instructions": "Mission History 1: Arrange the major battles of World War II in the correct chronological order.",
+        "blocks": [
+          "Battle of Britain",
+          "Battle of the Bulge",
+          "Battle of Midway",
+          "D-Day Invasion",
+          "Battle of Stalingrad",
+          "Storming of the Bastille",
+          "Napoleonic Wars"
+        ],
+        "solution": [
+          "Battle of Britain",
+          "Battle of Midway",
+          "Battle of Stalingrad",
+          "D-Day Invasion",
+          "Battle of the Bulge"
+        ]
+      },
+      {
+        "instructions": "Mission History 2: Arrange these Bronze Age events in the order they likely occurred.",
+        "blocks": [
+          "Invention of writing in Mesopotamia",
+          "Old Kingdom period begins in Egypt",
+          "Construction of Stonehenge begins",
+          "Code of Hammurabi issued",
+          "Trojan War",
+          "Signing of the Magna Carta",
+          "Founding of Rome"
+        ],
+        "solution": [
+          "Invention of writing in Mesopotamia",
+          "Construction of Stonehenge begins",
+          "Old Kingdom period begins in Egypt",
+          "Code of Hammurabi issued",
+          "Trojan War"
+        ]
+      },
+      {
+        "instructions": "Mission History 3: Arrange the U.S. Presidents by the order they served.",
+        "blocks": [
+          "George Washington",
+          "Abraham Lincoln",
+          "Franklin D. Roosevelt",
+          "John F. Kennedy",
+          "Barack Obama",
+          "Joe Biden",
+          "Theodore Roosevelt",
+          "King George III"
+        ],
+        "solution": [
+          "George Washington",
+          "Abraham Lincoln",
+          "Theodore Roosevelt",
+          "Franklin D. Roosevelt",
+          "John F. Kennedy",
+          "Barack Obama",
+          "Joe Biden"
+        ]
+      }
+    ]
+  }
+  

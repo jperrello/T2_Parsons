@@ -105,6 +105,81 @@ function escapeHtml(text) {
     return div.innerHTML;
 }
 
+function setupKeyboardNavigation() {
+    let allBlocks = document.querySelectorAll('.code-block');
+    let selectedBlock = null;
+
+    document.addEventListener('keydown', (e) => {
+        const activeElement = document.activeElement;
+
+        // Tab is handled automatically by browser for focus navigation.
+
+        if (e.key === ' ' || e.key === 'Enter') {
+            // Space or Enter toggles selection
+            e.preventDefault(); // Prevent scrolling on space
+            if (activeElement.classList.contains('code-block')) {
+                if (selectedBlock && selectedBlock !== activeElement) {
+                    selectedBlock.classList.remove('selected');
+                }
+                if (selectedBlock === activeElement) {
+                    activeElement.classList.remove('selected');
+                    selectedBlock = null;
+                } else {
+                    activeElement.classList.add('selected');
+                    selectedBlock = activeElement;
+                }
+            }
+        }
+
+        if (e.key === 'Escape') {
+            // Esc cancels selection
+            if (selectedBlock) {
+                selectedBlock.classList.remove('selected');
+                selectedBlock = null;
+            }
+        }
+
+        if (selectedBlock) {
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                moveSelectedBlock(selectedBlock, 'left');
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                moveSelectedBlock(selectedBlock, 'right');
+            }
+        }
+    });
+}
+
+function moveSelectedBlock(block, direction) {
+    const container = block.parentElement;
+    let newContainer = null;
+
+    if (!container) return;
+
+    const problemId = block.closest('.problem-container').id.split('-')[1];
+
+    if (direction === 'left') {
+        if (container.id === `solution-blocks-${problemId}`) {
+            newContainer = document.getElementById(`source-blocks-${problemId}`);
+        } else if (container.id === `dummy-blocks-${problemId}`) {
+            newContainer = document.getElementById(`solution-blocks-${problemId}`);
+        }
+    } else if (direction === 'right') {
+        if (container.id === `source-blocks-${problemId}`) {
+            newContainer = document.getElementById(`solution-blocks-${problemId}`);
+        } else if (container.id === `solution-blocks-${problemId}`) {
+            newContainer = document.getElementById(`dummy-blocks-${problemId}`);
+        }
+    }
+
+    if (newContainer) {
+        newContainer.appendChild(block);
+        block.focus();
+    }
+}
+
+
 // === SETUP GAME ===
 function setupGame(data) {
     currentProblem = 1;

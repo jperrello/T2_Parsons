@@ -1,0 +1,63 @@
+{
+    "title": "Code to Español 🇪🇸",
+    "problems": [
+      {
+        "instructions": "Mission Español 1: Arrange the sentence in proper Spanish order — meaning: 'I want to eat pizza today.'",
+        "blocks": [
+          "quiero",
+          "pizza",
+          "comer",
+          "hoy",
+          "yo",
+          "mañana",
+          "gato"
+        ],
+        "solution": [
+          "yo",
+          "quiero",
+          "comer",
+          "pizza",
+          "hoy"
+        ]
+      },
+      {
+        "instructions": "Mission Español 2: Arrange this question correctly — meaning: 'Where is the bathroom?'",
+        "blocks": [
+          "¿Dónde",
+          "está",
+          "el",
+          "baño?",
+          "cómo",
+          "eres",
+          "azul"
+        ],
+        "solution": [
+          "¿Dónde",
+          "está",
+          "el",
+          "baño?"
+        ]
+      },
+      {
+        "instructions": "Mission Español 3: Create the sentence — 'My friend is very tall.'",
+        "blocks": [
+          "Mi",
+          "amigo",
+          "es",
+          "muy",
+          "alto",
+          "azul",
+          "pelota",
+          "ella"
+        ],
+        "solution": [
+          "Mi",
+          "amigo",
+          "es",
+          "muy",
+          "alto"
+        ]
+      }
+    ]
+  }
+  
