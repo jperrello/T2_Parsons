@@ -22,23 +22,39 @@ document.addEventListener('DOMContentLoaded', async function() {
     const specUrl = getSpecificationUrl();
     gameData = await loadSpecification(specUrl);
     if (!gameData) {
-        alert('Failed to load problems.');
+        showCriticalError("🚨 Failed to load the Parsons Problems! Check your URL or JSON file.");
         return;
-    }
+    }    
     setupPage(gameData);
     setupGame(gameData);
 });
+
+function showCriticalError(message) {
+    const container = document.querySelector('.container');
+    container.innerHTML = `
+        <div style="padding: 30px; text-align: center; color: white;">
+            <h1 style="color: red;">Error</h1>
+            <p>${message}</p>
+            <p><strong>Hint:</strong> Make sure your "specification" parameter points to a valid JSON file!</p>
+            <p>Example: <code>?specification=specifications/csharp.json</code></p>
+        </div>
+    `;
+}
 
 // === FETCH JSON ===
 function getSpecificationUrl() {
     const params = new URLSearchParams(window.location.search);
     let spec = params.get('specification');
-    return spec || 'specifications/example42.json';
+    return spec || 'specifications/csharp.json';
 }
 
 async function loadSpecification(url) {
     try {
         const response = await fetch(url);
+        if (!response.ok) {
+            console.error(`HTTP Error: ${response.status} ${response.statusText}`);
+            return null;
+        }
         return await response.json();
     } catch (err) {
         console.error('Error loading spec:', err);
@@ -46,8 +62,10 @@ async function loadSpecification(url) {
     }
 }
 
+
 // === SETUP DOM ===
 function setupPage(data) {
+    console.log('Game Data:', data); 
     document.getElementById('page-title').textContent = data.title || 'Code to the Moon 🚀';
 
     const problemsArea = document.getElementById('problems-area');
