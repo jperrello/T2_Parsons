@@ -1,6 +1,6 @@
 # 🚀 Code to the Moon
 
-**Code to the Moon** is an interactive educational website that guides students through a series of adaptive Parsons Problems — visual coding puzzles — using the metaphor of a rocketship journey to the moon. Designed for the [Teaching with Generative AI](https://www.ucsc.edu) course at UCSC with Professor Adam Smith, this site blends storytelling, gamification, and programming education into one cohesive experience. This website was created by Joey Perrello.
+**Code to the Moon** is an interactive educational website that guides students through a series of adaptive Parsons Problems using the metaphor of a rocketship journey to the moon. Designed for the [Teaching with Generative AI](https://www.ucsc.edu) course at UCSC with Professor Adam Smith, this site blends storytelling, gamification, and programming education into one cohesive experience. This website was created by Joey Perrello.
 
 Built entirely alongside Generative AI tools (ChatGPT-4o, Claude, BayLeaf), the site explores how AI can support both student learning and developer creativity.
 
