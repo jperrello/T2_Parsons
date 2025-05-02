@@ -1,112 +1,88 @@
-# 🚀 Code to the Moon
+# Code to the Moon
 
-**Code to the Moon** is an interactive educational website that guides students through a series of adaptive Parsons Problems using the metaphor of a rocketship journey to the moon. Designed for the [Teaching with Generative AI](https://www.ucsc.edu) course at UCSC with Professor Adam Smith, this site blends storytelling, gamification, and programming education into one cohesive experience. This website was created by Joey Perrello.
+**Code to the Moon** is a small website I built for the Teaching with Generative AI course at UCSC. It’s a Parsons Problem platform — students get shuffled code blocks and try to put them in the right order. Every time they solve a problem, a little rocket animation moves closer to the moon.
 
-Built entirely alongside Generative AI tools (ChatGPT-4o, Claude, BayLeaf), the site explores how AI can support both student learning and developer creativity.
-
----
-
-## 🌌 What Is This Website?
-
-Students engage in Parsons Problems — puzzles where they arrange shuffled code blocks into the correct order — across a set of missions that simulate a rocket's ascent from Earth to the Moon. With every correct solution, their rocket moves closer to lunar touchdown. Key features include:
-
-- **Space-Themed Progression:** 
-  - A rocketship and space background track learning progress.
-- **Gamified Feedback:**
-  - Code blocks light up with colors (green = correct, yellow = misplaced, red = wrong) to give immediate feedback.
-- **Fuel System:**
-  - Players have three "fuel canisters" (attempts) per problem. Solve one? Earn a canister back.
-- **Keyboard Accessibility:**
-  - Full keyboard control lets students play without using a mouse.
-- **Rocket Launch Animation:**
-  - Code launch is triggered with a satisfying animated blast-off.
-- **Victory Screen and Certificate:**
-  - Students receive a summary and can download a personalized completion certificate to submit to platforms like Canvas.
+I themed it like a space mission, mostly because it made debugging more fun. Also, it gave me a good metaphor to explain how students progress through the problems. Also, it "looks nicer" than a standard HTML page.
 
 ---
 
-## 🧠 For Teachers: Customize with Your Own Content
+## What It Does
 
-**Code to the Moon** was designed to be *easily remixable*. Teachers and content creators can load their own problem sets by adding a `.json` file to the `specifications` folder or pointing to a public file online.
+- Students solve Parsons Problems that are created though an uploaded JSON file
+- There’s visual feedback (green/yellow/red) to show if blocks are correct, misplaced, or wrong
+- Students get 3 “fuel canisters” (attempts) per problem — solve one and you get one back
+- Fully keyboard accessible
+- Once all problems are done, a certificate shows up that they download to screenshot/submit
 
-### 🔧 How to Use Custom Problems
-
-To load your own problem set, just change the URL like this: index.html?specification=example42.json
-
-
-Where `example42.json` is:
-- A file you’ve placed in the `specifications/` folder, or
-- A public link to a JSON file elsewhere on the web
-
-### ✅ Default Problem Sets Included
-
-1. `csharp.json` – Code logic puzzles written in C#
-2. `history.json` – Arrange historical events or figures
-3. `spanish.json` – Construct correct Spanish sentences
-
-You can use these as templates to build your own subject-specific Parsons Problems.
+It’s all built in HTML, CSS, and JavaScript. No backend (yet). No frameworks. Just files.
 
 ---
 
-## 🛠 Development Journey
+## How to Add Your Own Problem Sets
 
-This project was created through five distinct development phases. Each step was guided by conversations with large language models — iterating, refactoring, and debugging alongside AI tools.
+Problem sets are stored as JSON files. To load a different one, just change the URL:
 
-### 📘 Summary 0 – Initial Launch
+index.html?specification=yourfile.json
 
-- Created the educational game structure and theme
-- Implemented Parsons Problems with Wordle-style feedback
-- Designed rocket animations, certificate system, and keyboard accessibility
-- Integrated a fuel-based retry mechanic
 
-### 🔄 Summary 1 – Refactoring for Flexibility
+`yourfile.json` can either be:
+- A file inside the `specifications/` folder, or
+- A link to a public `.json` file on the web
 
-- Removed hardcoded problems from HTML/JS
-- Switched to external JSON-driven content loading
-- Simplified the process of adding new problem sets for instructors
+### Some Included Examples
 
-### 🧪 Summary 2 – Debugging and Error Handling
+- `csharp.json` – Basic C# logic puzzles
+- `history.json` – Reorder historical events by date
+- `spanish.json` – Build grammatically correct Spanish sentences
 
-- Fixed broken DOM queries and invalid paths
-- Improved error handling when loading external JSON
-- Cleaned up HTML and added developer-friendly logging
-
-### ♿ Summary 3 – Accessibility and Layout Polish
-
-- Implemented full keyboard navigation
-- Reduced spacing to optimize small-screen experience
-- Refactored CSS for a compact, polished game UI
-
-### 🌍 Summary 4 – Expanding Beyond Code
-
-- Created new JSON problem sets for **History** and **Spanish**
-- Demonstrated flexibility of the platform across academic subjects
-- Added distractor blocks to increase complexity
+These can be used as templates to make your own.
 
 ---
 
-## 💬 What I Learned
+## How It Was Built
 
-Working alongside LLMs to build *Code to the Moon* taught me that:
+I built this whole thing using ChatGPT-4o, Claude, and BayLeaf. Basically I’d ask a question, test some code, and keep iterating. The rocket metaphor and fuel system were ideas that evolved as I got more into it. Every feature went through a few rounds of debugging with help from the GenerativeAI. I would not classify this process as "vibe-coding."
 
-- **AI doesn’t replace thinking.** You can’t just ask for an answer and expect quality — you need to ask the *right* questions.
-- **Iteration is key.** Every improvement came from refining prompts, testing changes, and using multiple models to compare ideas.
-- **Tokens are precious.** Keeping token count low by splitting tasks across chats helped maintain clarity and avoid hallucinations.
-- **Co-creation works.** The combination of human creativity and AI support led to faster, more thoughtful development.
+### Major Development Phases
+
+#### Phase 0: MVP
+- Basic Parsons Problem interface
+- Feedback coloring and rocket animation
+- Certificate generation
+
+#### Phase 1: Refactor
+- Pulled problems out of the HTML
+- Switched to JSON loading so it's easier to add new sets
+
+#### Phase 2: Bug Fixes
+- Cleaned up event listeners and edge cases
+- Error handling when JSON fails to load
+
+#### Phase 3: Accessibility and Layout
+- Added full keyboard support
+- Tweaked layout so it looks OK on small screens
+
+#### Phase 4: Subject Expansion
+- Created problem sets beyond just coding
+- Added distractor blocks for complexity
 
 ---
 
-## 👨‍💻 Built With
+## Things I Learned
 
-- HTML, CSS, and Vanilla JavaScript
-- JSON-driven problem specifications
-- Generative AI tools: ChatGPT-4o, Claude, BayLeaf
-- Designed and tested in [Visual Studio Code Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+- LLMs are helpful, but only if you already kind of know what you’re doing
+- Prompts matter way more than I expected — phrasing changed everything
+- Token limits are real and annoying — breaking things into smaller chats helped
+- Debugging with an AI is still *debugging*
 
 ---
 
-Thanks for exploring 🚀 *Code to the Moon*.  
-Your next mission: remix it, teach with it, or build your own!
+## Tech Stack
 
+- HTML/CSS/Vanilla JS
+- JSON for problem specs
+- Built and tested in VS Code Live Server
 
+---
 
+Feel free to remix or reuse it.
