@@ -1,8 +1,8 @@
 # Code to the Moon
 
-**Code to the Moon** is a small website I built for the Teaching with Generative AI course at UCSC. It’s a Parsons Problem platform — students get shuffled code blocks and try to put them in the right order. Every time they solve a problem, a little rocket animation moves closer to the moon.
+**Code to the Moon** is a small website I built for the Teaching with Generative AI course at UCSC. It’s a [Parsons Problem]([url](https://en.wikipedia.org/wiki/Parsons_problem)) platform, basically students get shuffled code blocks and try to put them in the right order. Every time they solve a problem, a little rocket animation moves closer to the moon.
 
-I themed it like a space mission, mostly because it made debugging more fun. Also, it gave me a good metaphor to explain how students progress through the problems. Also, it "looks nicer" than a standard HTML page.
+I themed it like a space mission, mostly because it made debugging more fun. Also, it gave me a good metaphor to explain how students progress through the problems.
 
 ---
 
