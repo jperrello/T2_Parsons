@@ -68,12 +68,23 @@ I built this whole thing using ChatGPT-4o, Claude, and BayLeaf. Basically I’d 
 
 ---
 
-## Things I Learned
+## Things I Learned with Working With AI
 
 - LLMs are helpful, but only if you already kind of know what you’re doing
 - Prompts matter way more than I expected — phrasing changed everything
 - Token limits are real and annoying — breaking things into smaller chats helped
 - Debugging with an AI is still *debugging*
+- Writing code alongside an LLM helped me learn a lot faster than I have in my previous years of programming.
+
+## Things I Learned about Web Development
+
+- How to fetch JSONs and load their specifications
+- Writing and Understanding code that connects JavaScript to HTML
+  - Funny to think i used to not know what document.getElementById and document.addEventListener did
+- Animations in CSS
+- Some Accessibility Features
+  - Keyboard Controls
+  - Need to add Color Blind Mode
 
 ---
 
